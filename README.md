@@ -62,6 +62,51 @@ For more details check out [Tutorial: Create a QnA Bot with Azure Bot Service v3
 
 ## Test and Configure Bot to use Knowledge base
 
-1. In the Azure Portal open `Web App Bot` and select `Test in Web Chat`
+1. In the Azure Portal open the `Web App Bot` and select `Test in Web Chat`
 
 ![testInWebChat](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/testInWebChat.png)
+
+For more details on how to do this [Get the App Setting](https://aka.ms/qnaabssetup) from QnA Maker.
+
+## Connect your QnA Maker knowledge base to the bot
+
+1. Open **Application Settings** and edit the **QnAKnowledgebaseId**, **QnAAuthKey**, and the **QnAEndpointHostName** fields to contain the values of your QnA Maker knowledge base.
+
+    ![app settings](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/application-settings.png)
+
+2. Click `Save`
+
+3. Get your knowledge base ID, host url, and the endpoint key from the settings tab of your knowledge base in the QnA Maker portal.
+
+    - Sign in to [QnA Maker](https://qnamaker.ai)
+    - Go to `My knowledge bases` and select your Knowledge base name
+    - Select the **Settings** tab
+    - **Publish** your knowledge base, if not already done so
+
+    ![QnA Maker values](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/qnamaker-settings-kbid-key.png)
+
+## Test the bot
+
+In the Azure portal, select **Test in Web Chat** to test the bot.
+
+Type in something like `What languages are related to Russian?`
+
+![QnA Maker bot](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/qna-bot-web-chat-response.png)
+
+The first time it might be a bit slow.  If it does not return an answer double check your values in `Application Settings`
+
+Your QnA Bot answers from your knowledge base.
+
+## Connect the bot to the Teams Channel
+
+1. Click on Channels and click Teams.  Click `Save` and `Agree` to Terms of Service
+
+![channels](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/channels.png)
+
+2. Click on the `Microsoft Teams` Channel and `Open Microsoft Teams`
+
+![connectToTeamsChannel](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/connectToTeamsChannel.png)
+
+3. Ask the bot a question in teams like `What are the Slavic languages?`
+
+![botInTeams](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/botInTeams.png)
