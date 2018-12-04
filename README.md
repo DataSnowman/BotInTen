@@ -20,11 +20,11 @@ To deploy the Azure resources required for this lab, you will need:
 
 ## Create an Azure QnA Maker Cognitive Service in the Resource group created earlier using the Azure Portal
 
-Search for `QnA` in the Azure Portal
+1. Search for `QnA` in the Azure Portal
 
 ![createQnAmaker](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/createQnAmaker.png)
 
-Click `Create`
+2. Click `Create`
 
 ## Create Knowledge Base
 
@@ -52,10 +52,16 @@ For more details check out [Tutorial: Create a knowledge base then answer questi
 
 ## Create Azure Web App Bot in the Resource group created earlier using the Azure Portal
 
-Search for `Bot` in the Azure Portal and select `Web App Bot`
+1. Search for `Bot` in the Azure Portal and select `Web App Bot`
 
 ![createWebAppBot](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/createWebAppBot.png)
 
-Click `Create`
+2. Click `Create`
 
 For more details check out [Tutorial: Create a QnA Bot with Azure Bot Service v3](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/tutorials/create-qna-bot)
+
+## Test and Configure Bot to use Knowledge base
+
+1. In the Azure Portal open `Web App Bot` and select `Test in Web Chat`
+
+![testInWebChat](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/testInWebChat.png)
