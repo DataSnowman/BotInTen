@@ -85,6 +85,8 @@ For more details on how to do this [Get the App Setting](https://aka.ms/qnaabsse
 
     ![QnA Maker values](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/qnamaker-settings-kbid-key.png)
 
+    Note: Be careful to put the `QnAAuthKey` (which is the last key in the deployment details) and the `QnAKnowledgebaseId` (which is the first ID in the deployment details) in the correct place in the Application settings.  If your bot is not working in `Test in Web Chat` it could be because you have these in the wrong place. 
+
 ## Test the bot
 
 In the Azure portal, select **Test in Web Chat** to test the bot.
@@ -93,7 +95,7 @@ Type in something like `What languages are related to Russian?`
 
 ![QnA Maker bot](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/qna-bot-web-chat-response.png)
 
-The first time it might be a bit slow.  If it does not return an answer double check your values in `Application Settings`
+The first time it might be a bit slow.  If it does not return an answer double check your values in `Application Settings` per the Note above.
 
 Your QnA Bot answers from your knowledge base.
 
@@ -110,3 +112,57 @@ Your QnA Bot answers from your knowledge base.
 3. Ask the bot a question in teams like `What are the Slavic languages?`
 
 ![botInTeams](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/botInTeams.png)
+
+## Deploy the bot into Teams
+
+1. Click on Store > Bots > App Studio
+
+![store](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/store.png)
+
+2. Click on `Available`
+
+![available](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/available.png)
+
+3. Click on `Open` next to `Bot`
+
+![appOpen](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/appOpen.png)
+
+4. Click on `Manifest editor` and select `Create a new app`
+
+![manifestEditor](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/manifestEditor.png)
+
+5. Enter details into the Manifest.  Click `Generate` to generate an App ID
+
+![manifestDetails1](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/manifestDetails1.png)
+
+![manifestDetails2](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/manifestDetails2.png)
+
+6. Click on Bots under the Capabilities section on the left navigation and click `Set up`
+
+![setupBots](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/setupBots.png)
+
+7. Choose `Existing bot` and provide a name for the bot, for the Bot ID choose `Select from one of my existing bots` and select the correct bot, and select the Scope in Teams and click `Create bot`
+
+![nameScope](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/nameScope.png)
+
+8. Click on `Test and distribute` and then click on `Install`
+
+![testAndDistribute](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/testAndDistribute.png)
+
+9. Choose the team you want the bot to be part of in `Add to a team` and select `Install`
+
+![installBot](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/installBot.png)
+
+10. Pick the channel where you want to use the app and click `Setup`
+
+![pickChannel](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/pickChannel.png)
+
+11. Click on the bot link, type a question, and click on the Conversation bubble icon
+
+![conversation](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/conversation.png)
+
+12. It works
+
+![itWorks](https://raw.githubusercontent.com/DataSnowman/BotInTen/master/images/itWorks.png)
+
+If you would like to see a video on this check out Larry Jin and Mark Rackley's Ignite Theatre Session from Microsoft Ingite [THR2040 - Build a bot in five minutes](https://myignite.techcommunity.microsoft.com/sessions/65554?source=sessions#ignite-html-anchor)
